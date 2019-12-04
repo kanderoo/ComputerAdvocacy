@@ -1,0 +1,23 @@
+body {
+	font-size: 18px;
+}
+div {
+	width: 800px;
+	margin: auto;
+	text-align: center;
+}
+p {
+	display: inline;
+}
+input[type="text"] {
+	border: 1px solid black;
+	color: black;
+	font-weight: bold;
+}
+button {
+	cursor: pointer;
+	display:block;
+	width: 100px;
+	margin: auto;
+	margin-top: 10px;
+}
