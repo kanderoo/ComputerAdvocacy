@@ -2,10 +2,16 @@
 <html>
 	<head>
 		<title>Capture the Flag</title>
+		<meta charset="utf-8"/>
 		<link rel="favicon" href="../favicon.ico">
 		<link rel="stylesheet" href="../static/index.css">
 	</head>
 	<body>
+		<p id="timer">0</p>
+		<form onsubmit="return false">
+			<p>What's your name?</p> <input type="text" id="nameField"></input>
+			<input type="submit" value="Submit" onclick="displayQuestion(0);setInterval(increaseTimer,1000)">
+		</form>
 		<script src="../static/index.js"></script>
 	</body>
 </html>

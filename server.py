@@ -1,6 +1,6 @@
 import tkinter as tk 
 # hello_world.py
-from flask import Flask, render_template, request, send_file
+from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
 data = []
@@ -15,7 +15,12 @@ tk.update()
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
+	return render_template('index.html')
+
+@app.route('/submit', methods=['POST'])
+def submit():
+	print(request.json)
+	return render_template('index.html')
 
 @app.route('/submit', methods=['POST'])
 def handleData():

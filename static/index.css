@@ -7,7 +7,12 @@ form {
 	text-align: center;
 	margin-bottom: 200px;
 }
-p {
+#timer {
+	position: fixed;
+	right: 10px;
+	margin: 0;
+}
+form p {
 	display: inline;
 	margin-right: 15px;
 }

@@ -1,8 +1,9 @@
-//Initialize Questions
+//Initialize Question
 var formArray = [["What's your favorite color?", "Blue"],
 		 ["Help", "no"],
 		 ["Convert this to binary: 2", "10"]];
 var questionNum = 0;
+var userName = "";
 
 function displayQuestion(questionNum) {
 	//CREATE ELEMENTS
@@ -24,16 +25,34 @@ function displayQuestion(questionNum) {
 	wrapper.appendChild(submit);
 	document.body.appendChild(wrapper);
 
-	document.body.children[questionNum+1].children[1].focus();
+	document.body.children[questionNum+3].children[1].focus();
 }
 
 function checkAnswer(number) {
-	if (document.getElementsByTagName("input")[number].value == formArray[number][1]) {
-		questionNum++;
-		displayQuestion(questionNum);
+	debugger;
+	if (document.getElementsByTagName("input")[number+2].value == formArray[number][1]) {
+		if (questionNum+1 < formArray.length) {
+			questionNum++;
+			displayQuestion(questionNum);
+		} else {
+			postData();
+		}
 	} else {
-		alert("incorrect")
+		alert("Sorry, incorrect!")
 	}
 }
 
-displayQuestion(questionNum);
+function postData() {
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", "/submit", true);
+	xhr.setRequestHeader('Content-Type', 'application/json');
+	xhr.send(JSON.stringify({
+		time: document.getElementById("timer").innerHTML,
+		name: document.getElementById("nameField").value
+	}));
+}
+
+function increaseTimer() {
+	document.getElementById("timer").innerHTML = parseInt(document.getElementById("timer").innerHTML)+1
+}
+
