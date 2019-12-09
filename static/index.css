@@ -15,6 +15,32 @@ form {
 form p {
 	display: inline;
 	margin-right: 15px;
+	white-space: pre-line;
+}
+.hintButton {
+	font-size: 12px;
+	margin-left: 8px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.hintBox {
+	background-color: #ddd;
+	padding: 10px;
+	width: 400px;
+	margin: auto;
+	margin-top: 10px;
+	color: #444;
+	font-size: 16px;
+}
+pre code {
+  background-color: #eaeaea;
+  display: block;
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+  text-align: left;
+  border: 1px solid grey;
+  margin-top: 0;
 }
 input[type="text"] {
 	border: 1px solid black;
