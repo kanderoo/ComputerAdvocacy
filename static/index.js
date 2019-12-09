@@ -58,9 +58,7 @@ function checkAnswer(number) {
 			questionNum++;
 			displayQuestion(questionNum);
 		} else {
-			debugger;
 			postData();
-			location.reload();
 		}
 	} else {
 		alert("Sorry, incorrect!")
@@ -69,12 +67,13 @@ function checkAnswer(number) {
 
 function postData() {
 	let xhr = new XMLHttpRequest();
-	xhr.open("POST", "/submit", true);
+	xhr.open("POST", "/submit", false);
 	xhr.setRequestHeader('Content-Type', 'application/json');
 	xhr.send(JSON.stringify({
 		time: document.getElementById("timer").innerHTML,
 		name: document.getElementById("nameField").value
 	}));
+	location.reload();
 }
 
 function increaseTimer() {

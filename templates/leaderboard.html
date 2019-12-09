@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Leaderboard</title>
+		<link rel="stylesheet" href="../static/leaderboard.css">
+		<meta http-equiv="refresh" content="3"/>
+		<meta charset="utf-8">
+		<script>
+      			window.data = {{ data | safe }}
+    		</script>
+	</head>
+	<body>
+		<h1>Leaderboard</h1>
+		<table>
+			<tr>
+				<td class="header">Time (S)</td>
+				<td class="header">Name</td>
+			</tr>
+		</table>
+		<script src="../static/leaderboard.js"></script>
+	</body>
+</html>
