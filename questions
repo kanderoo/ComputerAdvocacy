@@ -1,0 +1,10 @@
+Convert 11 from decimal to hexadecimal 
+
+How many bits are in a byte?
+
+How many bytes are in a kilobyte?
+
+What is printed by the following expression: int x = 1; \n printf(x + 4);
+
+What will be the last letter printed by the following expression: \n for (int i = 0; i < 10; i++) { \n printf(i); \n }
+
